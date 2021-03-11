@@ -9,6 +9,16 @@ function writePassword() {
   passwordText.value = password;
 
 }
+var numofchars = document.getElementById("numchars");
+var slideVal = document.getElementById("slid");
+console.log(numofchars.value);
+slideVal.innerText = numofchars.value;
+
+numofchars.oninput = function() {
+  slideVal.innerHTML = this.value;
+};
+
+console.log(typeof slideVal);
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
